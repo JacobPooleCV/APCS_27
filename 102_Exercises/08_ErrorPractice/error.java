@@ -3,7 +3,7 @@ class error {
         
 		System.out.println("Happy vacation day back!");
         System.out.println("What'd you do this weekend?");
-                           System.out.println("I watched a movie!");
+        System.out.println("I watched a movie!");
 
 		int number = 125;
 		System.out.println(number);
