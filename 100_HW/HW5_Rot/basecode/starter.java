@@ -92,13 +92,12 @@ public class starter {
         //     never less than 10. (Think about how you can use Math.max()).
 
         int rawDamage = (int)(heroPower * fateRoll);
-        int finalDamage = (int)(rawDamage - rivalDefense);
+        int finalDamage = (int)(Math.max(10,(rawDamage - rivalDefense)));
 
         // TODO 7: Create an int rivalHealthRemaining: rivalHealth
         //         minus finalDamage, but never less than 0.
 
-        int rivalHealthRemaining = (int)(rivalHealth - finalDamage);
-
+        int rivalHealthRemaining = (int)(Math.max((rivalHealth - finalDamage),0));
 
         // ============================================================
         // SECTION 5: The Rival Strikes Back
@@ -109,11 +108,14 @@ public class starter {
         //   - int rivalDamage: rivalPower * rivalFuryRoll, cast
         //     to (int).
 
+        double rivalFuryRoll = Math.random() * 0.5 + 1;
+        int rivalDamage = (int)(rivalPower * rivalFuryRoll);
 
         // TODO 9: Create an int heroHealthRemaining: your fighter
         //         starts each clash at 100 health. Subtract
         //         rivalDamage, but never let it drop below 0.
 
+        int heroHealthRemaining = (int)(Math.max(100 - rivalDamage,0));
 
         // ============================================================
         // SECTION 6: The Rizz Reward
@@ -121,6 +123,7 @@ public class starter {
         // TODO 10: Create an int basePoints: a random whole number
         //          from 50 to 300 (Not inclusive of 300).
 
+        int basePoints = (int)(Math.random() * 250 + 50);
 
         // TODO 11: Tally the reward. Create:
         //   - int damageDealt: rivalHealth minus rivalHealthRemaining
@@ -128,6 +131,9 @@ public class starter {
         //     of 100 extra points.
         //   - int totalRizz: basePoints + bonusPoints
 
+        int damageDealt = rivalHealth - rivalHealthRemaining;
+        int bonusPoints = (int)(Math.min(damageDealt,100));
+        int totalRizz = basePoints + bonusPoints;
 
         // ============================================================
         // SECTION 7: Battle Report  (given -- do not change but match your variables to these!)
@@ -151,19 +157,16 @@ public class starter {
         System.out.println("Rival health remaining: " + rivalHealthRemaining);
         System.out.println();
 
-        /* Delete for SECTION 5
         System.out.println("Rival fury roll: " + rivalFuryRoll);
         System.out.println("BOMBARDIRO CROCODILO deals " + rivalDamage + " damage!");
         System.out.println(heroName + "'s health remaining: " + heroHealthRemaining);
         System.out.println();
-        */
 
-        /* Delete for SECTION 6
         System.out.println("----- THE RIZZ REWARD -----");
         System.out.println("Base points earned: " + basePoints);
         System.out.println("Damage bonus: " + bonusPoints);
         System.out.println("TOTAL RIZZ POINTS: " + totalRizz);
-        */
+        
 
     }
 }
