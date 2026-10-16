@@ -10,7 +10,9 @@ class starter {
 	public static String add(String a, String b){
 		String sum = a + " " + b;
 		return sum;
-
+	}
+	public static void normal(String a){
+		return;
 	}
 
 	public static void main(String args[]) {
@@ -21,9 +23,8 @@ class starter {
 		String b = sc.nextLine();
 		System.out.println("");
 		System.out.println("This is using the methods!");
-		System.out.println(a);
+		normal(a);
 		System.out.println(add(a,b));
-	
 
 	}
 }
