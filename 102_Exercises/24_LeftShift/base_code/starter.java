@@ -31,7 +31,9 @@ class starter {
 	}
 
 	public static void printArray(String[] arr){
-
+		for(int count = 0; count < tvChars.length-1; count++){
+			System.out.print(tvChars[count] + " ");
+		}
 	}
 
 	public static void leftShift(String [] arr){
@@ -40,5 +42,5 @@ class starter {
 
 	public static void leftShift(String [] arr, int num){
 
-	}
+	}	
 }
