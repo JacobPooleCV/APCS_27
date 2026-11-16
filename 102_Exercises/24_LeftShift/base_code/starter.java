@@ -1,6 +1,6 @@
 /*
- *	Author:
- *  Date:
+ *	Author:Justin Pyo
+ *  Date: 11-16-26
 */
 import java.util.Scanner;
 
@@ -18,29 +18,39 @@ class starter {
 		printArray(tvChars);
 		System.out.println("---------------------------------------------");
 		leftShift(tvChars);
-		printArray(tvChars);
 		System.out.println("---------------------------------------------");
 
-		/*
+		
 		printArray(tvChars);
 		System.out.println("---------------------------------------------");
 		leftShift(tvChars, 5);
 		printArray(tvChars);
 		System.out.println("---------------------------------------------");
-		*/
+		
 	}
 
 	public static void printArray(String[] arr){
-		for(int count = 0; count < tvChars.length-1; count++){
-			System.out.print(tvChars[count] + " ");
+		for(int count = 0; count < arr.length-1; count++){
+			System.out.print(arr[count] + ", ");
 		}
+		System.out.println();
 	}
 
 	public static void leftShift(String [] arr){
-
+		String savefirst = arr[0];
+		for(int count = 0; count < arr.length-1; count++){
+			arr[count] = arr[count+1];
+			System.out.print(arr[count+1] + ", ");
+		}
+		System.out.println(savefirst);
+		
 	}
 
 	public static void leftShift(String [] arr, int num){
-
+		for(int count = 0; count < arr.length-num; count++){
+			arr[count] = arr[count+num];
+			System.out.print(arr[count] + ", ");
+		}
+		
 	}	
 }
