@@ -33,7 +33,7 @@ class starter {
 		System.out.println(dash);
 		System.out.println("Looking for two in a row:");
 		counter = 0;
-		while(counter < arr.length-1){
+		while(counter < arr.length-12){
 			if(arr[counter] == arr[counter+1]){
 				System.out.println("Two in a row found at indexes " + counter + " and " + (counter+1) + ". The number is " + arr[counter]);
 			}
