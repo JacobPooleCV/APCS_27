@@ -1,6 +1,6 @@
 /*
- *	Author:  
- *  Date: 
+ *	Author:  Justin Pyo
+ *  Date: 10-28-26
 */
 
 import pkg.*;
@@ -8,13 +8,15 @@ import java.util.*;
 
 class starter {
 	public static void main(String args[]) {
-		// Your code goes below here
+
+
+
 		BankAccount a = new BankAccount();
 		BankAccount b = new BankAccount("Walter White");
 		BankAccount c = new BankAccount("Jesse Pinkman", 230670.41);
 
 		a.displayAccountInfo();
-		b.displayAccountInfo();
+		b.displayAccountInfo();                                                                                                                                                                                                   
 		c.displayAccountInfo();
 		System.out.println();
 
@@ -37,5 +39,7 @@ class starter {
 		c.closeAccount();
 		c.deposit(1);
 		
+
+
 	}
 }
